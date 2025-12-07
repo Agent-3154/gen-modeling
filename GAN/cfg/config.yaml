@@ -1,0 +1,13 @@
+hydra:
+  run:
+    dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}-${gan_type}-${dataset}
+  job:
+    chdir: true
+
+gan_type: vanilla
+epochs: 50
+batch_size: 64
+latent_dim: 100
+lr: 0.0002
+dataset: mnist
+device: cuda
